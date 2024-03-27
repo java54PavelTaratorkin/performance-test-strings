@@ -5,7 +5,8 @@ public class SymbolsRemoveStandard implements SymbolsRemove {
 	@Override
 	public String symbolsRemove(String str, char symbol) {
 //		return str.replaceAll(getRegexSymbol(symbol), "");
-		return str.replaceAll("\\Q" + symbol + "\\E", "");
+//		return str.replaceAll("\\Q" + symbol + "\\E", "");
+		return str.replace(Character.toString(symbol), "");
 	}
 	
 	private String getRegexSymbol(char symbol) {
